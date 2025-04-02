@@ -22,8 +22,8 @@ def init_db():
 init_db()
 
 @app.route('/')
-def homepage():
-    return '<h2>Minha pagina com flask MUITO LINDA<h2>'
+def home__page():
+    return 'Ola'
 
 @app.route('/doar', methods=['POST'])
 def doar():
@@ -73,8 +73,5 @@ def listar_livros():
     return jsonify(livros_formatados)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
-
-
-
