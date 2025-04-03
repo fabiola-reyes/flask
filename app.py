@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template #se quito ayer para arreglar el problema con el github
 import sqlite3
 from flask_cors import CORS
 
@@ -23,7 +23,10 @@ init_db()
 
 @app.route('/')
 def home__page():
-    return 'Ola'
+    return render_template('index.html') #se quito ayer para arreglar el problema con el github, para que sirve
+import sqlite3
+from flask_cors import CORS
+
 
 @app.route('/doar', methods=['POST'])
 def doar():
